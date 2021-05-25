@@ -5,8 +5,8 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_virtual_machine" "CloudskilsDevVM" {
-  name                  = "cloudskillsvm"
+resource "azurerm_virtual_machine" "APDevVM" {
+  name                  = "APLinux"
   location              = var.location
   resource_group_name   = var.resourceGroupName
   network_interface_ids = ["${var.network_interface_id}"]
@@ -27,7 +27,7 @@ resource "azurerm_virtual_machine" "CloudskilsDevVM" {
   }
 
   os_profile {
-    computer_name  = "cloudskillsdev01"
+    computer_name  = "aplinuxdev01"
     admin_username = "azureuser"
     admin_password = "W3lcomeWorld12!!"
   }
