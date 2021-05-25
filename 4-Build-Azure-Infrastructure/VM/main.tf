@@ -20,7 +20,7 @@ resource "azurerm_virtual_machine" "APDevVM" {
   }
 
   storage_os_disk {
-    name              = "disk1"
+    name              = "diskLin"
     caching           = "ReadWrite"
     create_option     = "FromImage"
     managed_disk_type = "Standard_LRS"
